@@ -99,7 +99,7 @@ def get_back_keyboard(back_to: str):
 @dp.message(CommandStart())
 async def cmd_start(message: Message, state: FSMContext):
     await state.clear()
-    await message.answer("Привет! 👋\nЗдесь ты можешь оставить свой отзыв о (Ваше название).",
+    await message.answer("Привет! 👋\nЗдесь ты можешь оставить свой отзыв о "Ваше название".",
                          reply_markup=get_main_menu_keyboard())
 
 
@@ -113,7 +113,7 @@ async def cmd_admin(message: Message, state: FSMContext):
 @dp.callback_query(F.data == "main_menu")
 async def back_to_main_menu(callback: CallbackQuery, state: FSMContext):
     await state.clear()
-    await callback.message.edit_text("Привет! 👋\nЗдесь ты можешь оставить свой отзыв о Т Е М К А.",
+    await callback.message.edit_text("Привет! 👋\nЗдесь ты можешь оставить свой отзыв "Ваше название".",
                                      reply_markup=get_main_menu_keyboard())
 
 
@@ -442,4 +442,5 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
 
