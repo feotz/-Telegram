@@ -99,7 +99,7 @@ def get_back_keyboard(back_to: str):
 @dp.message(CommandStart())
 async def cmd_start(message: Message, state: FSMContext):
     await state.clear()
-    await message.answer("Привет! 👋\nЗдесь ты можешь оставить свой отзыв о Т Е М К А.",
+    await message.answer("Привет! 👋\nЗдесь ты можешь оставить свой отзыв о (Ваше название).",
                          reply_markup=get_main_menu_keyboard())
 
 
@@ -442,3 +442,4 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
